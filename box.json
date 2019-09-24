@@ -1,0 +1,36 @@
+{
+    "name":"cbyaml",
+    "version":"0.0.0",
+    "author":"Eric Peterson",
+    "location":"elpete/cbyaml#v0.0.0",
+    "homepage":"https://github.com/elpete/cbyaml",
+    "documentation":"https://github.com/elpete/cbyaml",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/elpete/cbyaml"
+    },
+    "bugs":"https://github.com/elpete/cbyaml/issues",
+    "slug":"cbyaml",
+    "shortDescription":"Provides easy serialization and deserialization of yaml files",
+    "description":"Provides easy serialization and deserialization of yaml files",
+    "type":"modules",
+    "dependencies":{},
+    "devDependencies":{
+        "coldbox":"^4.3.0+188",
+        "testbox":"^2.4.0+80"
+    },
+    "installPaths":{
+        "testbox":"testbox/",
+        "coldbox":"tests/resources/app/coldbox/"
+    },
+    "scripts":{
+        "postVersion":"package set location='elpete/cbyaml#v`package version`'",
+        "onRelease":"publish",
+        "postPublish":"!git push && !git push --tags"
+    },
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ]
+}
