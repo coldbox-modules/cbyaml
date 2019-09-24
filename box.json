@@ -27,9 +27,7 @@
         "cbjavaloader":"modules/cbjavaloader/"
     },
     "scripts":{
-        "postVersion":"package set location='elpete/cbyaml#v`package version`'",
-        "onRelease":"publish",
-        "postPublish":"!git push && !git push --tags"
+        "postVersion":"package set location='elpete/cbyaml#v`package version`'"
     },
     "ignore":[
         "**/.*",
