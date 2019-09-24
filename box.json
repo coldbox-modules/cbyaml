@@ -1,8 +1,8 @@
 {
     "name":"cbyaml",
-    "version":"0.0.0",
+    "version":"1.0.1",
     "author":"Eric Peterson",
-    "location":"elpete/cbyaml#v0.0.0",
+    "location":"elpete/cbyaml#v1.0.1",
     "homepage":"https://github.com/elpete/cbyaml",
     "documentation":"https://github.com/elpete/cbyaml",
     "repository":{
