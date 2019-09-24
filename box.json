@@ -14,14 +14,17 @@
     "shortDescription":"Provides easy serialization and deserialization of yaml files",
     "description":"Provides easy serialization and deserialization of yaml files",
     "type":"modules",
-    "dependencies":{},
+    "dependencies":{
+        "cbjavaloader":"^2.0.0+44"
+    },
     "devDependencies":{
-        "coldbox":"^4.3.0+188",
-        "testbox":"^2.4.0+80"
+        "coldbox":"^5.6.2+1021",
+        "testbox":"^3.0.0"
     },
     "installPaths":{
         "testbox":"testbox/",
-        "coldbox":"tests/resources/app/coldbox/"
+        "coldbox":"tests/resources/app/coldbox/",
+        "cbjavaloader":"modules/cbjavaloader/"
     },
     "scripts":{
         "postVersion":"package set location='elpete/cbyaml#v`package version`'",
