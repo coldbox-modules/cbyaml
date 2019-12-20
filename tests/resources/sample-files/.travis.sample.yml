@@ -24,3 +24,4 @@ script:
   - box testbox run runner='http://127.0.0.1:8500/tests/runner.cfm'
 notifications:
   email: false
+testkey: 1

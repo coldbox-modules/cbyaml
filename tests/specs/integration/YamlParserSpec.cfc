@@ -103,7 +103,8 @@ component extends="tests.resources.ModuleIntegrationSpec" appMapping="/app" {
             ],
             "notifications": {
                 "email": false
-            }
+            },
+            "testkey":1
         };
     }
 

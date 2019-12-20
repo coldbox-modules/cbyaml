@@ -37,8 +37,8 @@ component singleton {
 
 		// if we're in a loop iteration and the array item is simple, return it
 		if ( isSimpleValue( arguments.map ) ) {
-            if ( isBoolean( arguments.map ) ) {
-                return javacast( "boolean", arguments.map );
+            if ( ReFind( "^(true|false)$", arguments.map ) ) {
+                return arguments.map == "true";
             }
             return arguments.map;
         }
