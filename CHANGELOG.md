@@ -1,3 +1,11 @@
+# v1.0.2
+## 20 Dec 2019 — 05:26:04 UTC
+
+### other
+
++ __\*:__ fix: Only cast true and false as booleans ([2b61851](https://github.com/elpete/cbyaml/commit/2b61851fc9abcd356bd69cdfb07654c0819aa498))
+
+
 # v1.0.1
 ## 24 Sep 2019 — 04:36:33 UTC
 
