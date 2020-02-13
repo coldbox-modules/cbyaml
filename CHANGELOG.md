@@ -1,3 +1,12 @@
+# v1.0.3
+## 13 Feb 2020 — 16:22:24 UTC
+
+### other
+
++ __\*:__ chore: Store binaries on ForgeBox storage
+ ([60b610f](https://github.com/elpete/cbyaml/commit/60b610f243fa6f8bb229b650aae97bc3d260303f))
+
+
 # v1.0.2
 ## 20 Dec 2019 — 05:26:04 UTC
 
