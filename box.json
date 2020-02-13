@@ -2,7 +2,7 @@
     "name":"cbyaml",
     "version":"1.0.2",
     "author":"Eric Peterson",
-    "location":"elpete/cbyaml#v1.0.2",
+    "location":"forgeboxStorage",
     "homepage":"https://github.com/elpete/cbyaml",
     "documentation":"https://github.com/elpete/cbyaml",
     "repository":{
@@ -26,9 +26,7 @@
         "coldbox":"tests/resources/app/coldbox/",
         "cbjavaloader":"modules/cbjavaloader/"
     },
-    "scripts":{
-        "postVersion":"package set location='elpete/cbyaml#v`package version`'"
-    },
+    "scripts":{},
     "ignore":[
         "**/.*",
         "test",
