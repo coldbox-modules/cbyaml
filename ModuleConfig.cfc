@@ -13,24 +13,21 @@ component {
     }
 
 	function onLoad() {
-		wirebox.getInstance( "loader@cbjavaloader" )
+        wirebox.getInstance( "loader@cbjavaloader" )
             .appendPaths( variables.modulePath & "/lib" );
 
-        if ( structKeyExists( variables, "controller" ) && settings.autoLoadHelpers ) {
+        if ( variables.keyExists( "controller" ) && settings.autoLoadHelpers ) {
             var helpers = controller.getSetting( "applicationHelper" );
-            arrayAppend(
-                helpers,
-                "#moduleMapping#/helpers.cfm"
-            );
+            helpers.append( "#moduleMapping#/helpers.cfm" );
             controller.setSetting( "applicationHelper", helpers );
         }
     }
 
     function onUnload() {
-        if( structKeyExists( variables, "controller" ) ){
+        if( variables.keyExists( "controller" ) && settings.autoLoadHelpers ) {
 	    controller.setSetting(
                 "applicationHelper",
-                arrayFilter( controller.getSetting( "applicationHelper" ), function( helper ) {
+                controller.getSetting( "applicationHelper" ).filter( function( helper ) {
                     return helper != "#moduleMapping#/helpers.cfm";
                 } )
             );
