@@ -1,3 +1,11 @@
+# v1.0.4
+## 20 Feb 2020 — 18:11:12 UTC
+
+### fix
+
++ __ModuleConfig:__ Update to be ColdBox Controller aware ([dbf9557](https://github.com/elpete/cbyaml/commit/dbf95571a759e1ab17a64ccea646f8c9eb254a63))
+
+
 # v1.0.3
 ## 13 Feb 2020 — 16:22:24 UTC
 
