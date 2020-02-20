@@ -13,26 +13,25 @@ component {
     }
 
 	function onLoad() {
-		wirebox.getInstance( "loader@cbjavaloader" )
+        wirebox.getInstance( "loader@cbjavaloader" )
             .appendPaths( variables.modulePath & "/lib" );
 
-        if ( settings.autoLoadHelpers ) {
+        if ( variables.keyExists( "controller" ) && settings.autoLoadHelpers ) {
             var helpers = controller.getSetting( "applicationHelper" );
-            arrayAppend(
-                helpers,
-                "#moduleMapping#/helpers.cfm"
-            );
+            helpers.append( "#moduleMapping#/helpers.cfm" );
             controller.setSetting( "applicationHelper", helpers );
         }
     }
 
     function onUnload() {
-        controller.setSetting(
-            "applicationHelper",
-            arrayFilter( controller.getSetting( "applicationHelper" ), function( helper ) {
-                return helper != "#moduleMapping#/helpers.cfm";
-            } )
-        );
+        if( variables.keyExists( "controller" ) && settings.autoLoadHelpers ) {
+	    controller.setSetting(
+                "applicationHelper",
+                controller.getSetting( "applicationHelper" ).filter( function( helper ) {
+                    return helper != "#moduleMapping#/helpers.cfm";
+                } )
+            );
+	}
     }
 
 }
