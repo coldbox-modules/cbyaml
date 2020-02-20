@@ -16,7 +16,7 @@ component {
 		wirebox.getInstance( "loader@cbjavaloader" )
             .appendPaths( variables.modulePath & "/lib" );
 
-        if ( settings.autoLoadHelpers ) {
+        if ( structKeyExists( variables, "controller" ) && settings.autoLoadHelpers ) {
             var helpers = controller.getSetting( "applicationHelper" );
             arrayAppend(
                 helpers,
@@ -27,12 +27,14 @@ component {
     }
 
     function onUnload() {
-        controller.setSetting(
-            "applicationHelper",
-            arrayFilter( controller.getSetting( "applicationHelper" ), function( helper ) {
-                return helper != "#moduleMapping#/helpers.cfm";
-            } )
-        );
+        if( structKeyExists( variables, "controller" ) ){
+	    controller.setSetting(
+                "applicationHelper",
+                arrayFilter( controller.getSetting( "applicationHelper" ), function( helper ) {
+                    return helper != "#moduleMapping#/helpers.cfm";
+                } )
+            );
+	}
     }
 
 }
