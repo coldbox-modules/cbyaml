@@ -36,7 +36,7 @@
         "format:check":"cfformat check helpers,models,test-harness/tests/,ModuleConfig.cfc",
 		"cfpm":"echo '\".engine/WEB-INF/cfusion/bin/cfpm.sh\"' | run",
         "cfpm:install":"echo '\".engine/WEB-INF/cfusion/bin/cfpm.sh\" install ${1}' | run",
-        "install:2021":"run-script cfpm:install zip,debugger"
+        "install:2021":"run-script cfpm:install zip,debugger,feed"
     },
     "ignore":[
         "**/.*",
