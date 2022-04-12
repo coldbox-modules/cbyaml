@@ -10,14 +10,14 @@ on:
       - "master"
       - "development"
     paths: # Only run if *.cfc or github workflows are modified
-        - '**.cfc'
-        - '.github/workflows/*.yml'
+      - '**.cfc'
+      - '.github/workflows/*.yml'
   pull_request:
     branches:
       - development
     paths: # Only run if *.cfc or github workflows are modified
-        - '**.cfc'
-        - '.github/workflows/*.yml'
+      - '**.cfc'
+      - '.github/workflows/*.yml'
 
 jobs:
   # Format PR
