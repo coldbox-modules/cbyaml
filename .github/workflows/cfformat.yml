@@ -3,6 +3,7 @@ name: CFFormat
 on:
   workflow_dispatch:
   repository_dispatch:
+    types: [cfformat]
   push:
     branches-ignore:
       - "main"
@@ -11,8 +12,9 @@ on:
   pull_request:
     branches:
       - development
-  paths:
-      - '**.cfc' # Only run if *.cfc files are modified
+  paths: # Only run if *.cfc or github workflows are modified
+      - '**.cfc'
+      - '.github/workflows/*.yml'
 
 jobs:
   # Format PR

@@ -5,6 +5,7 @@ on:
     types: [published]
   workflow_dispatch:
   repository_dispatch:
+    types: [docbox]
 
 jobs:
   docbox:
@@ -14,8 +15,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 1
 
       - name: Generate API Docs
         run: box run-script build:docs
