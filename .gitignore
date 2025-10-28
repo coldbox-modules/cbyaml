@@ -4,3 +4,4 @@
 /tests/resources/sample-files/sample.yml
 /node_modules
 /modules
+/.engine

@@ -19,7 +19,7 @@
     },
     "devDependencies":{
         "coldbox":"^5.6.2+1021",
-        "testbox":"^3.0.0"
+        "testbox":"^6"
     },
     "installPaths":{
         "testbox":"testbox/",
